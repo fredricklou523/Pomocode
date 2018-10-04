@@ -59,6 +59,11 @@ app.get('/token', (req, res) => {
     });
 });
 
+
+app.post('/vsCode', (req) => {
+  console.log(req.body);
+});
+
 // query github API v4(GraphQL)
 app.post('/query', (req, res) => {
   gitQuery(req.body.token, req.body.query)
